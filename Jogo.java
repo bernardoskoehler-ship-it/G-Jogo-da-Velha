@@ -54,8 +54,11 @@ public class Jogo {
                 }
                 if(j1.simbolo == (cv.nomeVencedor)) {
                         System.out.println(j1.nome +" Ganhou!");
+                        return;
                 }else if(j1.simbolo == (cv.nomeVencedor)) {
                         System.out.println(j2.nome +" Ganhou!");
+                        return;
                 }
+                System.out.println("Empatou!");
         }
 }
