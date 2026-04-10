@@ -1,6 +1,7 @@
 public class Jogo {
      int[][] grade = new int[3][3];
-
+     CondicaoDeVitoria cv = new CondicaoDeVitoria();
+     Controle controle = new Controle();
 
      public void mostrarGrade(){
         System.out.println("====================================");
@@ -29,4 +30,23 @@ public class Jogo {
     public boolean espacoLivre(int linha, int coluna) {
         return grade[linha][coluna] == 0;
 }
+
+public void iniciarJogo(Jogador j1, Jogador j2){
+    System.out.println("Começou o embate");
+
+    while (!cv.fimDeJogo(this)) {
+        System.out.println("Jogo rolando");
+        pegarPosicao(controle, j1);
+        mostrarGrade();
+        pegarPosicao(controle, j2);
+        mostrarGrade();
+
+        
+    }
+    System.out.println("Você venceu!");
+}
+
+
+
+
 }
