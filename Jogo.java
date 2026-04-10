@@ -23,10 +23,10 @@ public class Jogo {
         public void pegarPosicao(Controle controle, Jogador jogador){
                 System.out.println("Digite as suas posições");
                 while(true) {
-                        
+
                         int pos1 = Controle.lerInt();
                         int pos2 = Controle.lerInt();
-                        
+
                         if(!espacoLivre(pos1, pos2)) {
                                 System.out.println("Posição inserida invalida");
                                 continue;
@@ -35,9 +35,11 @@ public class Jogo {
                         break;
                 }
         }
+
         public boolean espacoLivre(int linha, int coluna) {
                 return grade[linha][coluna] == 0;
         }
+
         public void iniciarJogo(Jogador j1, Jogador j2){
                 System.out.println("Começou o embate");
 
@@ -45,9 +47,16 @@ public class Jogo {
                         System.out.println("Jogo rolando");
                         pegarPosicao(controle, j1);
                         mostrarGrade();
-                        pegarPosicao(controle, j2);
-                        mostrarGrade();
+                        if(!cv.fimDeJogo(this)) {
+                                pegarPosicao(controle, j2);
+                                mostrarGrade();
+                                break;
+                        }
                 }
-                System.out.println("Você venceu!");
+                if(j1.nome.equals(cv.nomeVencedor)) {
+                        System.out.println(j1.nome +" Ganhou!");
+                        return;
+                }
+                System.out.println(j2.nome +" Ganhou!");
         }
 }
