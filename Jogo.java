@@ -3,16 +3,21 @@ public class Jogo {
 
 
     public void mostrarGrade(){
-        System.out.println("====================================");
+     System.out.println("====================================");
 
 
-        System.out.println(grade[0][0]+" | "+grade[0][1]+" | "+grade[0][2]);
-        System.out.println(grade[1][0]+" | "+grade[1][1]+" | "+grade[1][2]);
-        System.out.println(grade[2][0]+" | "+grade[2][1]+" | "+grade[2][2]);
+     System.out.println(mostrarSimbolo(grade[0][0])+" | "+mostrarSimbolo(grade[0][1])+" | "+mostrarSimbolo(grade[0][2]));
+     System.out.println(mostrarSimbolo(grade[1][0])+" | "+mostrarSimbolo(grade[1][1])+" | "+mostrarSimbolo(grade[1][2]));
+     System.out.println(mostrarSimbolo(grade[2][0])+" | "+mostrarSimbolo(grade[2][1])+" | "+mostrarSimbolo(grade[2][2]));
 
 
-        System.out.println("====================================");
+     System.out.println("====================================");
     }
+     public String mostrarSimbolo(int i) {
+          if(i == 1) return "X";
+          if(i == 2) return "O";
+          return ".";
+        }
 
     public void pegarPosicao(Controle controle){
         System.out.println("Digite as suas posições");
