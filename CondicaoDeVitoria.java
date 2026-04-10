@@ -39,18 +39,20 @@ public class CondicaoDeVitoria {
         }
         return valor == 9;
     }
-    private boolean empate(Jogo jogo) {
-        return deuEmpate(jogo);
-    }
 
+
+
+    //Possibilidades de resultado
     private boolean venceu(Jogo jogo){
         nomeVencedor = 0;
         return vLinha(jogo) || vColuna(jogo);
     }
-    private boolean empatou(Jogo jogo) {
-        return empate(jogo);
+
+    private boolean empate(Jogo jogo) {
+        return deuEmpate(jogo);
     }
+
     public boolean fimDeJogo(Jogo jogo) {
-        return empatou(jogo) || venceu(jogo);
+        return empate(jogo) || venceu(jogo);
     }
 }
