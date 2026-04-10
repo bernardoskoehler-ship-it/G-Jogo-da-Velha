@@ -27,7 +27,7 @@ public class Jogo {
                         int pos1 = Controle.lerInt();
                         int pos2 = Controle.lerInt();
 
-                        if(!espacoLivre(pos1, pos2)) {
+                        if(!espacoLivre(pos1, pos2) || espacoOcupado(pos1, pos2)) {
                                 System.out.println("Posição inserida invalida");
                                 continue;
                         }
@@ -39,7 +39,9 @@ public class Jogo {
         public boolean espacoLivre(int linha, int coluna) {
                 return grade[linha][coluna] == 0;
         }
-
+        public boolean espacoOcupado(int linha, int coluna) {
+                return grade[linha][coluna] != 0;
+        }
         public void iniciarJogo(Jogador j1, Jogador j2){
                 System.out.println("Começou o embate");
 
@@ -60,5 +62,6 @@ public class Jogo {
                         return;
                 }
                 System.out.println("Empatou!");
+
         }
 }
