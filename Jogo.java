@@ -52,10 +52,10 @@ public class Jogo {
                                 mostrarGrade();
                         }
                 }
-                if(j1.nome.equals(cv.nomeVencedor)) {
+                if(j1.simbolo == (cv.nomeVencedor)) {
                         System.out.println(j1.nome +" Ganhou!");
-                        return;
+                }else if(j1.simbolo == (cv.nomeVencedor)) {
+                        System.out.println(j2.nome +" Ganhou!");
                 }
-                System.out.println(j2.nome +" Ganhou!");
         }
 }
