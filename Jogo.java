@@ -1,8 +1,8 @@
 public class Jogo {
-    static int[][] grade = new int[3][3];
+     int[][] grade = new int[3][3];
 
 
-    static public void mostrarGrade(){
+    public void mostrarGrade(){
         System.out.println("====================================");
 
 
@@ -14,21 +14,10 @@ public class Jogo {
         System.out.println("====================================");
     }
 
-    public static void main(String[] args) {
-        
-
-
+    public void pegarPosicao(Controle controle){
         System.out.println("Digite as suas posições");
-        Controle controle = new Controle();
         int pos1 = Controle.lerInt();
         int pos2 = Controle.lerInt();
-
         grade[pos1][pos2] = 1;
-
-        mostrarGrade();
-        
-
     }
-
-
 }
