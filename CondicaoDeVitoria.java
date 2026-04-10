@@ -40,11 +40,7 @@ public class CondicaoDeVitoria {
         return valor == 9;
     }
     private boolean empate(Jogo jogo) {
-        if(deuEmpate(jogo)) {
-            System.out.println("Deu empate");
-            return true;
-        }
-        return false;
+        return deuEmpate(jogo);
     }
 
     private boolean venceu(Jogo jogo){
