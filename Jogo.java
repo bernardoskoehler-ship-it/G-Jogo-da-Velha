@@ -25,4 +25,7 @@ public class Jogo {
         int pos2 = Controle.lerInt();
         grade[pos1][pos2] = 1;
     }
+     public boolean espacoLivre(int linha, int coluna) {
+                return grade[linha][coluna] == 0;
+        }
 }
