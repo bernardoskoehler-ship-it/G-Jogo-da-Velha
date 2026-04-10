@@ -50,7 +50,6 @@ public class Jogo {
                         if(!cv.fimDeJogo(this)) {
                                 pegarPosicao(controle, j2);
                                 mostrarGrade();
-                                break;
                         }
                 }
                 if(j1.nome.equals(cv.nomeVencedor)) {
