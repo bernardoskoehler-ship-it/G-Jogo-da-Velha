@@ -35,11 +35,9 @@ public class Jogo {
                         break;
                 }
         }
-
         public boolean espacoLivre(int linha, int coluna) {
                 return grade[linha][coluna] == 0;
         }
-
         public void iniciarJogo(Jogador j1, Jogador j2){
                 System.out.println("Começou o embate");
 
