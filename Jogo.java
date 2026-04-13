@@ -6,7 +6,7 @@ public class Jogo {
         public void mostrarGrade(){
                 System.out.println("====================================");
 
-                System.err.println("  0   1   2");
+                System.out.println("  0   1   2");
 
                 System.out.println("0 "+mostrarSimbolo(grade[0][0])+" | "+mostrarSimbolo(grade[0][1])+" | "+mostrarSimbolo(grade[0][2]));
                 System.out.println("1 "+mostrarSimbolo(grade[1][0])+" | "+mostrarSimbolo(grade[1][1])+" | "+mostrarSimbolo(grade[1][2]));
